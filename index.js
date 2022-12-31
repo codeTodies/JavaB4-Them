@@ -194,3 +194,48 @@ document.getElementById("result-wr").style.display="block"
 document.getElementById("magic").innerHTML=tram +" " + chuc + " "+ donvi
 }
 console.log((521%100)/10);
+
+
+//bài 4
+document.getElementById("played").onclick=function(){
+  let sv1=document.getElementById("sv1").value;
+  let sv2=document.getElementById("sv2").value;
+  let sv3=document.getElementById("sv3").value;
+  let x1=+document.getElementById("x1").value;
+  let x2=+document.getElementById("x2").value;
+  let x3=+document.getElementById("x3").value;
+  let y1=+document.getElementById("y1").value;
+  let y2=+document.getElementById("y2").value;
+  let y3=+document.getElementById("y3").value;
+  let y4=+document.getElementById("y4").value;
+  let x4=+document.getElementById("x4").value;
+  let distance1=+Math.sqrt(Math.pow(x4-x1,2)+Math.pow(y4-y1,2));
+  let distance2=+Math.sqrt(Math.pow(x4-x2,2)+Math.pow(y4-y3,2));
+  let distance3=+Math.sqrt(Math.pow(x4-x3,2)+Math.pow(y4-y3,2));
+  let max=distance1;
+  let kq="";
+  if(distance2>max)
+  {
+    max=distance2;
+  }
+  else if(distance3>max)
+  {
+    max=distance3;
+  }
+  if(max=distance1)
+  {
+    kq=sv1;
+  }
+  else if(max=distance2)
+  {
+    kq=sv2;
+  }
+  else if(max=distance3)
+  {
+    kq=sv3;
+  }
+  console.log(Math.sqrt(Math.pow(x4-x1,2)+Math.pow(y4-y1,2)));
+  console.log(8);
+  document.getElementById("result-w").style.display="block";
+  document.getElementById("open").innerHTML= kq + " xa trường nhất"
+}
